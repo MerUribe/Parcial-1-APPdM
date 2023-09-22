@@ -1,0 +1,10 @@
+body{font:20px/25px verdana}
+		[v-cloak] { display: none;}
+		.component{margin:0 auto; width:960px;}
+		ul{list-style: none;}
+		ul li span{width:400px;display: inline-block}
+		.classBien{border:solid 1px green;width:200px;height: 35px; visibility: hidden}
+		.classError{color:red; height: 35px;border:solid 1px transparent;}
+		input{width: 200px;}
+		.pendientes{color:red;}
+		.terminadas{background-color:green;color:white;}
