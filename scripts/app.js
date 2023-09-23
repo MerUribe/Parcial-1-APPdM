@@ -61,6 +61,43 @@ Vue.component('componente-hijo', {
 	`,
 })
 
+Vue.component('form-data', {
+	data:function(){
+		return {
+			form_data:{
+				tema:"",
+				nombre:"",
+				apellido:""
+			}	
+		}
+	},
+	template:`
+		<div class="form">
+			<form v-on:submit.prevent>
+				<label>Nombre</label>
+				<input type="text" v-model="form_data.nombre"  placeholder="Ingrese su Nombre"/>
+			    
+				<label>Apellido</label>
+				<input type="text" v-model="form_data.apellido"  placeholder="Ingrese su apellido"/>
+	
+				<button @click="guardar(form_data)">Guardar</button>
+
+				<label>tema1
+					<input type="radio" value="Plan 1" v-model="form_data.tema">
+				</label>
+				<label>tema2
+  					<input type="radio" value="Plan 2" v-model="form_data.tema">
+				</label>
+				<label>tema3
+  					<input type="radio" value="Plan 3" v-model="form_data.tema">
+				</label>
+				<p>Eligió:{{form_data.tema}}</p>
+			</form>	
+		</div>`,	
+
+	});	
+	
+
 //Se declara la instancia
 var app= new Vue({
 	el: ".contenedor",
